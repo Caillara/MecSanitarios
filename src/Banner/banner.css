@@ -1,0 +1,77 @@
+.banner {
+    height: 81vh;
+    width: 100%;
+    background: url('/public/Img/Inicio/BannerInicio.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+  }
+
+  @media(min-width: 1024px) {
+    .banner {
+      height: 88vh;
+    }
+  }
+  
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para mejorar la legibilidad del texto */
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 40px;
+  }
+  
+  .banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media(min-width: 768px) {
+    .banner h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  .banner p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  @media(min-width: 768px) {
+    .banner p {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .button_reserva_ahora{
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--color-principal); /* Color coral */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button_reserva_ahora:hover {
+    background-color: #ff5722; /* Tono más oscuro al pasar el cursor */
+  }
+
+  .link_reserva_ahora {
+    color: white;
+  }

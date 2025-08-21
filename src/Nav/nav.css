@@ -1,0 +1,162 @@
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  background-color: var(--color-secundario);
+}
+
+.nav_title {
+  font-size: 1.8rem;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-left: 24px;
+}
+
+/* Botón hamburguesa */
+.menu_icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+/* Panel de menú (off-canvas en mobile) */
+.menu {
+  position: fixed;
+  list-style: none;
+  right: -420px;
+  top: 0;
+  padding: 100px 24px 24px 24px; /* deja el header libre */
+  background-color: var(--color-secundario);
+  color: white;
+  height: 100vh;                 /* ocupa toda la altura */
+  width: 70vw;                   /* ancho del panel */
+  max-width: 380px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+  z-index: 900;                  /* debajo del submenu (que usará 1000+) */
+  text-align: left;
+  transition: right .4s ease;
+  overflow-y: auto;              /* scroll interno */
+}
+.menu li {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.link_menu_nav {
+  color: white;
+  text-decoration: none;
+}
+
+.menu.active {
+  right: 0;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  .menu_icon { display: none; }
+
+  .menu {
+    position: absolute;
+    right: 24px;
+    top: 0;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: none;
+    background: transparent;
+    z-index: 10;
+    transition: none;
+    overflow: visible; /* importante para el submenu */
+  }
+  .menu li {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+  .nav_title { margin-left: 32px; }
+}
+
+/* === Submenús === */
+.parent-with-caret {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.caret-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 .25rem;
+  color: white;
+}
+.caret-btn .rot { transform: rotate(180deg); transition: transform .2s; }
+
+.has-submenu { position: relative; }
+
+/* Por defecto (desktop) el submenu es absoluto debajo del item */
+.submenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);  /* cae debajo del item, no “sube” */
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  z-index: 1000;          /* sobre el menú */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.submenu li a {
+  display: block;
+  padding: .7rem 1rem;
+  color: #222;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.submenu li a:hover { background: #f5f7fb; }
+
+/* Desktop: abrir en hover */
+@media (hover:hover) and (pointer:fine) {
+  .has-submenu:hover > .submenu { display: block; }
+}
+
+/* Mobile: cuando el item está .open, el submenu entra al flujo */
+@media (max-width: 767.98px) {
+  .has-submenu.open > .submenu {
+    display: block;
+    position: static;   /* se integra a la columna del panel */
+    border: 0;
+    box-shadow: none;
+    background: rgba(255,255,255,.08);
+    margin: 6px 0 10px 8px;
+    border-left: 2px solid rgba(255,255,255,.35);
+  }
+  .submenu li a {
+    color: #fff;
+    padding: .55rem 1rem;
+  }
+}

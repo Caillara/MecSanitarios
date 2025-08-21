@@ -1,0 +1,44 @@
+/* Whatsapp flotante */
+  
+.logo-wspp-flotante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: var(--color-principal);
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+  }
+  .logo-wspp-flotante a {
+    height: 35px;
+  }
+  .logo-wspp-flotante:hover {
+    background-color: #f1f1f1;
+  }
+  .bxl-whatsapp {
+    color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    transition: all 0.5s;
+  }
+
+  .logo-wspp-flotante:hover .bxl-whatsapp {
+    color: var(--color-principal); 
+}
+  
+  @media (max-width: 600px) {
+    .bxl-whatsapp {
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+    .logo-wspp-flotante a {
+        height: 30px;
+      }
+  }

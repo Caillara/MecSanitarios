@@ -1,0 +1,70 @@
+[
+  {
+    "nombre": "Castillo Clasico Multicolor",
+    "descripcion": "Incluye tobogán sin cargo.",
+    "precio": 50000,
+    "precioAnterior": 65000,
+    "medida": "5x3 mts",
+    "stock": true,
+    "img": "/Img/Productos/CastilloClasico.jpg",
+    "link": "https://wa.link/x1iiar"
+  },
+  {
+    "nombre": "Ring Lucha",
+    "descripcion": "Adrenalina y diversión segura para niños y adultos. Incluye guantes gigantes.",
+    "precio": 68000,
+    "precioAnterior": 88000,
+    "medida": "5x5 mts",
+    "stock": true,
+    "img": "/Img/Productos/Ring.jpg",
+    "link": "https://wa.link/qk0xgs"
+  },
+  {
+    "nombre": "Castillo Blanco",
+    "descripcion": "Ideal para casamientos, comuniones o eventos que requieran más seriedad. Incluye tobogán sin cargo.",
+    "precio": 75000,
+    "medida": "3x3 mts",
+    "stock": true,
+    "img": "/Img/Productos/CastilloBlanco.jpg",
+    "link": "https://wa.link/tcxawd"
+  },
+  {
+    "nombre": "Cancha Jabonosa",
+    "descripcion": "El partido más divertido! Ideal para jugar entre varios amigos. Incluye pelota.",
+    "precio": 98000,
+    "precioAnterior": 120000,
+    "medida": "12x9 mts",
+    "stock": true,
+    "img": "/Img/Productos/CanchaJabonosa.jpg",
+    "link": "https://wa.link/mjqtt1"
+  },
+  {
+    "nombre": "Tobogán Acuático",
+    "descripcion": "Podes usarlo con tu piscina o nosotros te incluimos una pileta inflable sin cargo.",
+    "precio": 105000,
+    "medida": "5x3 mts",
+    "stock": true,
+    "img": "/Img/Productos/ToboganAcuatico.jpg",
+    "link": "https://wa.link/ci3ljt"
+  },
+  {
+    "nombre": "Deslizador Acuático",
+    "descripcion": "Diversión al extremo para los días de calor. Podes usarlo con tu piscina o nosotros te incluimos una pileta inflable sin cargo.",
+    "precio": 85000,
+    "precioAnterior": 105000,
+    "medida": "2x5 mts",
+    "stock": true,
+    "img": "/Img/Productos/DeslizadorAcuatico.jpg",
+    "link": "https://wa.link/8qnvu1"
+  },
+  {
+    "nombre": "Escalador",
+    "descripcion": "Diversión para valientes! Escalador de 3mts de alto con castillo.",
+    "precio": 85000,
+    "precioAnterior": 105000,
+    "medida": "3x6 mts",
+    "stock": true,
+    "img": "/Img/Productos/Img.jpg",
+    "link": "https://wa.link/1cn8vv"
+  }
+]
