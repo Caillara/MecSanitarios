@@ -1,0 +1,76 @@
+/* Contenedor general */
+.hero-derecha {
+  --gap: 28px;
+  --radius: 14px;
+
+  display: grid;
+  gap: var(--gap);
+  padding: clamp(48px, 4vw, 72px);
+  align-items: center;
+  /* fondo suave opcional, podés quitarlo */
+  background: #f7fafc; 
+}
+
+/* En mobile: imagen arriba, texto y botón debajo */
+.hero-derecha__media {
+  order: 0;
+}
+.hero-derecha__img {
+  width: 100%;
+  height: clamp(220px, 45vw, 420px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* Texto + botón */
+.hero-derecha__content {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hero-derecha__title {
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0;
+  color: #222;
+}
+.hero-derecha__text {
+  font-size: clamp(1rem, 2.8vw, 1.1rem);
+  color: #4a4a4a;
+  margin: 0;
+  max-width: 62ch;
+}
+
+.hero-derecha__btn {
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 12px 18px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: #111;     /* podés usar var(--color-secundario) si querés unificar */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.hero-derecha__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  background: #000;
+}
+
+/* Desktop: dos columnas, imagen a la derecha */
+@media (min-width: 992px) {
+  .hero-derecha {
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .hero-derecha__media {
+    order: 2; /* imagen a la derecha */
+  }
+  .hero-derecha__content {
+    order: 1;
+    padding-right: clamp(8px, 2vw, 24px);
+  }
+}

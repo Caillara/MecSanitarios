@@ -1,17 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./nav.css";
 import "boxicons";
 
 function Nav() {
-  const [active, setActive] = useState(false); // menú hamburguesa
+  const [active, setActive] = useState(false); // panel hamburguesa
   const [openSub, setOpenSub] = useState({
     cocina: false,
     bano: false,
     accesorios: false,
   });
 
-  const handleClick = () => setActive(!active);
+  // Detecta si el dispositivo soporta hover "real" (desktop)
+  const [isHoverable, setIsHoverable] = useState(true);
+  useEffect(() => {
+    const mql = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const apply = () => setIsHoverable(mql.matches);
+    apply();
+    mql.addEventListener?.("change", apply);
+    return () => mql.removeEventListener?.("change", apply);
+  }, []);
+
+  const handleClick = () => setActive((v) => !v);
+
   const closeMenu = () => {
     setActive(false);
     setOpenSub({ cocina: false, bano: false, accesorios: false });
@@ -19,6 +30,15 @@ function Nav() {
 
   const toggleSub = (key) =>
     setOpenSub((s) => ({ ...s, [key]: !s[key] }));
+
+  // Handlers de hover sólo en desktop
+  const hoverHandlers = (key) =>
+    isHoverable
+      ? {
+          onMouseEnter: () => setOpenSub((s) => ({ ...s, [key]: true })),
+          onMouseLeave: () => setOpenSub((s) => ({ ...s, [key]: false })),
+        }
+      : {};
 
   return (
     <nav>
@@ -38,6 +58,7 @@ function Nav() {
       </button>
 
       <ul id="menu" className={active ? "menu active" : "menu"}>
+
         <li>
           <NavLink to="/" className="link_menu_nav" onClick={closeMenu}>
             Inicio
@@ -47,13 +68,13 @@ function Nav() {
         {/* COCINA */}
         <li
           className={`has-submenu ${openSub.cocina ? "open" : ""}`}
-          onMouseEnter={() => setOpenSub((s) => ({ ...s, cocina: true }))}
-          onMouseLeave={() => setOpenSub((s) => ({ ...s, cocina: false }))}
+          {...hoverHandlers("cocina")}
         >
           <div className="parent-with-caret">
             <NavLink to="/cocina" className="link_menu_nav" onClick={closeMenu}>
               Cocina
             </NavLink>
+
             <button
               className="caret-btn"
               type="button"
@@ -62,31 +83,27 @@ function Nav() {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                toggleSub("cocina");
+                toggleSub("cocina"); // en mobile actúa como acordeón
               }}
               title="Abrir submenú de Cocina"
             >
-              <i className={`bx bx-chevron-down ${openSub.cocina ? "rot" : ""}`}></i>
+              <i className={`bx bx-chevron-down ${openSub.cocina ? "rot" : ""}`} />
             </button>
           </div>
 
           <ul
             id="submenu-cocina"
-            className="submenu"
+            className={`submenu ${isHoverable ? "" : "is-mobile"}`}
             aria-hidden={!openSub.cocina}
           >
             <li><NavLink to="/cocina/griferias" onClick={closeMenu}>Griferías</NavLink></li>
-            <li><NavLink to="/cocina/bachas" onClick={closeMenu}>Bachas</NavLink></li>
-            <li><NavLink to="/cocina/piletas" onClick={closeMenu}>Piletas</NavLink></li>
-            <li><NavLink to="/cocina/desagues" onClick={closeMenu}>Desagües</NavLink></li>
           </ul>
         </li>
 
         {/* BAÑO */}
         <li
           className={`has-submenu ${openSub.bano ? "open" : ""}`}
-          onMouseEnter={() => setOpenSub((s) => ({ ...s, bano: true }))}
-          onMouseLeave={() => setOpenSub((s) => ({ ...s, bano: false }))}
+          {...hoverHandlers("bano")}
         >
           <div className="parent-with-caret">
             <NavLink to="/bano" className="link_menu_nav" onClick={closeMenu}>
@@ -104,19 +121,18 @@ function Nav() {
               }}
               title="Abrir submenú de Baño"
             >
-              <i className={`bx bx-chevron-down ${openSub.bano ? "rot" : ""}`}></i>
+              <i className={`bx bx-chevron-down ${openSub.bano ? "rot" : ""}`} />
             </button>
           </div>
 
           <ul
             id="submenu-bano"
-            className="submenu"
+            className={`submenu ${isHoverable ? "" : "is-mobile"}`}
             aria-hidden={!openSub.bano}
           >
-            <li><NavLink to="/bano/griferias" onClick={closeMenu}>Griferías</NavLink></li>
-            <li><NavLink to="/bano/inodoros" onClick={closeMenu}>Inodoros</NavLink></li>
-            <li><NavLink to="/bano/bidets" onClick={closeMenu}>Bidets</NavLink></li>
-            <li><NavLink to="/bano/vanitorys" onClick={closeMenu}>Vanitorys</NavLink></li>
+            <li><NavLink to="/bano/sanitarios-inteligentes" onClick={closeMenu}>Sanitarios inteligentes</NavLink></li>
+            <li><NavLink to="/bano/griferias" onClick={closeMenu}>Griferias</NavLink></li>
+            <li><NavLink to="/bano/bachas" onClick={closeMenu}>Bachas</NavLink></li>
             <li><NavLink to="/bano/duchas" onClick={closeMenu}>Duchas</NavLink></li>
           </ul>
         </li>
@@ -124,8 +140,7 @@ function Nav() {
         {/* ACCESORIOS */}
         <li
           className={`has-submenu ${openSub.accesorios ? "open" : ""}`}
-          onMouseEnter={() => setOpenSub((s) => ({ ...s, accesorios: true }))}
-          onMouseLeave={() => setOpenSub((s) => ({ ...s, accesorios: false }))}
+          {...hoverHandlers("accesorios")}
         >
           <div className="parent-with-caret">
             <NavLink to="/accesorios" className="link_menu_nav" onClick={closeMenu}>
@@ -143,19 +158,19 @@ function Nav() {
               }}
               title="Abrir submenú de Accesorios"
             >
-              <i className={`bx bx-chevron-down ${openSub.accesorios ? "rot" : ""}`}></i>
+              <i className={`bx bx-chevron-down ${openSub.accesorios ? "rot" : ""}`} />
             </button>
           </div>
 
           <ul
             id="submenu-accesorios"
-            className="submenu"
+            className={`submenu ${isHoverable ? "" : "is-mobile"}`}
             aria-hidden={!openSub.accesorios}
           >
-            <li><NavLink to="/accesorios/portarrollos" onClick={closeMenu}>Portarrollos</NavLink></li>
-            <li><NavLink to="/accesorios/toalleros" onClick={closeMenu}>Toalleros</NavLink></li>
-            <li><NavLink to="/accesorios/repisas" onClick={closeMenu}>Repisas</NavLink></li>
-            <li><NavLink to="/accesorios/espejos" onClick={closeMenu}>Espejos</NavLink></li>
+            <li><NavLink to="/accesorios/flor-de-ducha" onClick={closeMenu}>Flor de ducha</NavLink></li>
+            <li><NavLink to="/accesorios/flexiles" onClick={closeMenu}>Flexiles</NavLink></li>
+            <li><NavLink to="/accesorios/rejilla-piso" onClick={closeMenu}>Rejilla piso</NavLink></li>
+            <li><NavLink to="/accesorios/otros" onClick={closeMenu}>Otros</NavLink></li>
           </ul>
         </li>
       </ul>

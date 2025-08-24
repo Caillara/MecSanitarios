@@ -5,7 +5,7 @@ nav {
   justify-content: center;
   height: 100px;
   width: 100%;
-  background-color: var(--color-secundario);
+  background-color: var(--color-principal);
 }
 
 .nav_title {
@@ -13,7 +13,7 @@ nav {
   position: relative;
   text-align: center;
   color: white;
-  margin-left: 24px;
+  margin-left: 16px;
 }
 
 /* Botón hamburguesa */
@@ -23,7 +23,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   font-size: 32px;
-  height: 40px;
+  height: 30px;
   width: 40px;
   background: transparent;
   border: 0;
@@ -31,43 +31,31 @@ nav {
   cursor: pointer;
 }
 
-/* Panel de menú (off-canvas en mobile) */
+/* PANEL DE MENÚ (off-canvas en mobile) */
 .menu {
   position: fixed;
   list-style: none;
   right: -420px;
   top: 0;
-  padding: 100px 24px 24px 24px; /* deja el header libre */
-  background-color: var(--color-secundario);
+  padding: 48px 24px 24px 40px;
+  background-color: var(--color-principal);
   color: white;
-  height: 100vh;                 /* ocupa toda la altura */
-  width: 70vw;                   /* ancho del panel */
+  height: 100vh;
+  width: 50vw;
   max-width: 380px;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
-  z-index: 900;                  /* debajo del submenu (que usará 1000+) */
+  box-shadow: 0 1px 20px rgba(0,0,0,.3);
+  z-index: 900;
   text-align: left;
-  transition: right .4s ease;
-  overflow-y: auto;              /* scroll interno */
+  transition: right .35s ease;
+  overflow-y: auto;
 }
-.menu li {
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-.link_menu_nav {
-  color: white;
-  text-decoration: none;
-}
-
-.menu.active {
-  right: 0;
-}
+.menu li { margin-bottom: 12px; font-weight: 500; }
+.link_menu_nav { color: white; text-decoration: none; }
+.menu.active { right: 0; }
 
 /* Desktop */
 @media (min-width: 768px) {
-  nav {
-    justify-content: space-between;
-    padding: 0 24px;
-  }
+  nav { justify-content: space-between; padding: 0 24px; }
   .menu_icon { display: none; }
 
   .menu {
@@ -86,16 +74,13 @@ nav {
     background: transparent;
     z-index: 10;
     transition: none;
-    overflow: visible; /* importante para el submenu */
+    overflow: visible;
   }
-  .menu li {
-    margin-bottom: 0;
-    font-size: 18px;
-  }
+  .menu li { margin-bottom: 0; font-size: 18px; }
   .nav_title { margin-left: 32px; }
 }
 
-/* === Submenús === */
+/* === SUBMENÚS === */
 .parent-with-caret {
   display: inline-flex;
   align-items: center;
@@ -111,26 +96,33 @@ nav {
   padding: 0 .25rem;
   color: white;
 }
-.caret-btn .rot { transform: rotate(180deg); transition: transform .2s; }
+.caret-btn .rot { transform: rotate(180deg); transition: transform .2s ease; }
 
 .has-submenu { position: relative; }
 
-/* Por defecto (desktop) el submenu es absoluto debajo del item */
+/* --- DESKTOP: dropdown con fade + slide --- */
 .submenu {
-  display: none;
   position: absolute;
-  top: calc(100% + 8px);  /* cae debajo del item, no “sube” */
+  top: calc(100%);
   left: 0;
-  min-width: 220px;
+  min-width: 125px;
   background: #fff;
   border: 1px solid #e6e6e6;
   box-shadow: 0 6px 18px rgba(0,0,0,.12);
-  z-index: 1000;          /* sobre el menú */
+  z-index: 1000;
   border-radius: 8px;
   overflow: hidden;
+
+  /* transición */
+  opacity: 0;
+  transform: translateY(8px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
 }
 
 .submenu li a {
+  font-size: 1rem;
   display: block;
   padding: .7rem 1rem;
   color: #222;
@@ -139,23 +131,41 @@ nav {
 }
 .submenu li a:hover { background: #f5f7fb; }
 
-/* Desktop: abrir en hover */
+/* Abrir en hover sólo si el dispositivo es hoverable */
 @media (hover:hover) and (pointer:fine) {
-  .has-submenu:hover > .submenu { display: block; }
+  .has-submenu:hover > .submenu,
+  .has-submenu.open > .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
 }
 
-/* Mobile: cuando el item está .open, el submenu entra al flujo */
+/* --- MOBILE: acordeón con max-height + fade --- */
 @media (max-width: 767.98px) {
-  .has-submenu.open > .submenu {
-    display: block;
-    position: static;   /* se integra a la columna del panel */
+  /* marcamos los submenús usados en mobile */
+  .submenu.is-mobile {
+    position: static;
+    background: rgba(255,255,255,.08);
     border: 0;
     box-shadow: none;
-    background: rgba(255,255,255,.08);
-    margin: 6px 0 10px 8px;
     border-left: 2px solid rgba(255,255,255,.35);
+    margin: 6px 0 10px 8px;
+    border-radius: 6px;
+
+    /* estado cerrado */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .25s ease, opacity .22s ease;
   }
-  .submenu li a {
+  .has-submenu.open > .submenu.is-mobile {
+    max-height: 800px; /* suficiente para el contenido */
+    opacity: 1;
+  }
+
+  .submenu.is-mobile li a {
     color: #fff;
     padding: .55rem 1rem;
   }

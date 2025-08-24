@@ -6,10 +6,12 @@ const Banner = () => {
   return (
     <section className="banner">
       <div className="banner-content">
-        <h1>¡Diversión Asegurada para tus Eventos!</h1>
-        <p>Alquiler de castillos inflables, toboganes y más para todas las edades.</p>
+        <h1>¡Renová tu hogar con calidad y estilo en cada detalle!</h1>
+        <p>En Mec Sanitarios te ofrecemos productos de cocina, baño y accesorios 
+        pensados para brindarte calidad, diseño y confianza en cada detalle 
+        de tu hogar.</p>
         <button className="button_reserva_ahora">
-          Reservar ahora
+          Consultar ahora
         </button>
       </div>
     </section>

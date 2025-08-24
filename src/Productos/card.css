@@ -1,7 +1,7 @@
 .card {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+    border-radius: 4px;
     width: 250px;
 }
 .price {
@@ -13,7 +13,7 @@
     left: 0;
     padding: 4px 16px;
     color: white;
-    background-color: rgb(255, 136, 0);
+    background-color: rgb(63, 63, 63);
     border-radius: 8px 0 0 0;
     font-size: 0.8rem;
 }
@@ -45,7 +45,7 @@
     transition: all .5s;
 }
 .card button:hover {
-    background-color: #5331a9;
+    background-color: var(--color-principal);
 }
 .bx-info-circle {
     font-size: 28px;
@@ -60,5 +60,7 @@
 
 .container_card_img img {
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    height: 250px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid gray;
 }

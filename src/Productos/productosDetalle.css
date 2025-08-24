@@ -1,0 +1,60 @@
+.container { max-width: 1200px; margin: 0 auto; padding: clamp(40px, 3vw, 36px); }
+
+/* Layout principal */
+.pd-grid {
+  display: grid;
+  gap: clamp(16px, 3vw, 36px);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .pd-grid {
+    grid-template-columns: 1.1fr 1fr; 
+    align-items: start;
+  }
+}
+
+/* Media */
+.pd-media { display: grid; gap: 12px; }
+.pd-main {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  background: #fff;
+}
+.pd-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 8px; }
+.pd-thumb {
+  padding: 0; border: 1px solid #e9ecef; background: #fff; border-radius: 8px; cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.pd-thumb:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+.pd-thumb img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; }
+
+/* Info */
+.pd-title { font-size: clamp(1.6rem, 3.2vw, 2.75rem); margin: 0 0 6px; color: #000;}
+.pd-subtitle { color: #6c757d; margin: 0 0 14px; }
+.pd-price { display: flex; align-items: baseline; gap: 12px; margin: 4px 0 18px; }
+.pd-price-now { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: #000;}
+.pd-price-before { color: #6c757d; }
+.pd-desc { color: #2b2b2b; line-height: 1.65; margin-bottom: 18px; max-width: 62ch; }
+
+.pd-actions { margin: 12px 0 18px; }
+.pd-btn {
+  display: inline-block; padding: 12px 18px; border-radius: 4px;
+  background: #111; color: #fff; text-decoration: none; font-weight: 600;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.pd-btn:hover { transform: translateY(-1px); background: #000; box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+
+/* Meta */
+.pd-meta { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; color: #3a3a3a; }
+.pd-meta li strong { color: #111; }
+
+/* Link-reset para las cards (Productos.jsx) */
+.link-reset { color: inherit; text-decoration: none; }
+.link-reset:hover { text-decoration: none; }
+
+/* Opcional: borde suave como en tu referencia */
+.pd .pd-media, .pd .pd-info { }
