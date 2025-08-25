@@ -170,10 +170,20 @@ nav {
     visibility: visible;        
     pointer-events: auto;  
     background-color: white;     
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .submenu.is-mobile li a {
     color: #000;              
     padding: .55rem 1rem;
+  }
+
+  .has-submenu-inicio {
+    margin-bottom: 8px;
+  }
+
+  .open {
+    margin-bottom: 32px;
   }
 }

@@ -59,7 +59,7 @@ function Nav() {
 
       <ul id="menu" className={active ? "menu active" : "menu"}>
 
-        <li>
+        <li className="has-submenu-inicio">
           <NavLink to="/" className="link_menu_nav" onClick={closeMenu}>
             Inicio
           </NavLink>
