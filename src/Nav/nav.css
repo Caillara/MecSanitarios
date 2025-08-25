@@ -154,19 +154,25 @@ nav {
     margin: 6px 0 10px 8px;
     border-radius: 6px;
 
-    /* estado cerrado */
+    /* cerrado */
     max-height: 0;
     overflow: hidden;
+
+    /* IMPORTANTE: hereda de .submenu -> hay que anularlos en open */
     opacity: 0;
-    transition: max-height .25s ease, opacity .22s ease;
+    visibility: hidden;        
+    pointer-events: none;    
+    transition: max-height .25s ease, opacity .22s ease, visibility .22s ease;
   }
   .has-submenu.open > .submenu.is-mobile {
-    max-height: 800px; /* suficiente para el contenido */
+    max-height: 800px;
     opacity: 1;
+    visibility: visible;        
+    pointer-events: auto;       
   }
 
   .submenu.is-mobile li a {
-    color: #fff;
+    color: #fff;              
     padding: .55rem 1rem;
   }
 }
