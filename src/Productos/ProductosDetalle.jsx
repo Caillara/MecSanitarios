@@ -98,7 +98,7 @@ export default function ProductosDetalle() {
               target="_blank"
               rel="noreferrer"
             >
-              Consultar
+              Solicitar
             </a>
           </div>
 

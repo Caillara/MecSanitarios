@@ -36,7 +36,7 @@ function Productos() {
               )}
 
               <div className="container_card_button">
-                <button type="button">Solicitar</button>
+                <a href={producto.link} target="_blank">Solicitar</a>
                 <i className="bx bx-info-circle"></i>
               </div>
             </Link>

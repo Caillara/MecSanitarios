@@ -34,8 +34,6 @@
 }
 .container_card_button a {
     color: white;
-}
-.card button {
     padding: 8px 16px;
     font-size: 16px;
     background-color: var(--color-secundario);
@@ -44,7 +42,8 @@
     cursor: pointer;
     transition: all .5s;
 }
-.card button:hover {
+
+.container_card_button a:hover {
     background-color: var(--color-principal);
 }
 .bx-info-circle {
