@@ -10,9 +10,7 @@ const Banner = () => {
         <p>En Mec Sanitarios te ofrecemos productos de cocina, baño y accesorios 
         pensados para brindarte calidad, diseño y confianza en cada detalle 
         de tu hogar.</p>
-        <button className="button_reserva_ahora">
-          Consultar ahora
-        </button>
+        <a href="https://wa.link/418ywq" target='_blank' className='button_reserva_ahora'>Consultar ahora</a>
       </div>
     </section>
   );
