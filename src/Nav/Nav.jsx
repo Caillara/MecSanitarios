@@ -42,7 +42,8 @@ function Nav() {
 
   return (
     <nav>
-      <div>
+      <div className="container_logo">
+        <img className="logo_ms" src="/Img/Inicio/Logo_MecSanitarios.png" alt="Logo de Mec Sanitarios" />
         <h1 className="nav_title">Mec Sanitarios</h1>
       </div>
 
