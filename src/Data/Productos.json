@@ -2,7 +2,7 @@
   {
     "nombre": "Mod.308",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.308.webp",
@@ -19,7 +19,7 @@
   {
     "nombre": "Mod.314",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.314(1).webp",
@@ -36,7 +36,7 @@
   {
     "nombre": "Mod.316",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.316(1).webp",
@@ -53,7 +53,7 @@
   {
     "nombre": "Mod.320",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.320.webp",
@@ -70,7 +70,7 @@
   {
     "nombre": "Mod.321",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.321.webp",
@@ -87,7 +87,7 @@
   {
     "nombre": "Mod.325",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.325(1).webp",
@@ -104,7 +104,7 @@
   {
     "nombre": "Mod.326",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.326(1).webp",
@@ -121,7 +121,7 @@
   {
     "nombre": "Mod.336",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.336(1).webp",
@@ -138,7 +138,7 @@
   {
     "nombre": "Mod.408",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.408(1).webp",
@@ -155,7 +155,7 @@
   {
     "nombre": "Mod.415",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.415(1).webp",
@@ -172,7 +172,7 @@
   {
     "nombre": "Mod.416",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.416(1).webp",
@@ -189,7 +189,7 @@
   {
     "nombre": "Mod.432",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.432.webp",
@@ -206,7 +206,7 @@
   {
     "nombre": "Mod.438",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.438.webp",
@@ -223,7 +223,7 @@
   {
     "nombre": "Mod.442",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Cocina/Griferia/Mod.442.webp",
@@ -237,11 +237,10 @@
     "tipo": "griferia",
     "link": "https://wa.link/jvf6jy"
   },
-
   {
     "nombre": "Mod.822",
     "descripcion": "Bacha extraíble de loza blanca, diseño moderno y práctico. (415×415×135 mm).",
-    "precio": 97000,
+    "precio": 106700,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Bachas/Mod.822(1).webp",
@@ -258,7 +257,7 @@
   {
     "nombre": "Mod.8227",
     "descripcion": "Bacha extraíble de loza con diseño tipo hexágono; moderna, funcional y resistente (640×415×130 mm).",
-    "precio": 97000,
+    "precio": 106700,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Bachas/Mod.8227.webp",
@@ -275,7 +274,7 @@
   {
     "nombre": "Mod.8289",
     "descripcion": "Lavamanos blanco de instalación sencilla, diseño actual y gran durabilidad (610×410×145 mm).",
-    "precio": 136000,
+    "precio": 149600,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Bachas/Mod.8289(1).webp",
@@ -292,7 +291,7 @@
   {
     "nombre": "Mod.8337",
     "descripcion": "Bacha extraíble de loza blanca, moderna y resistente; ideal para quienes buscan practicidad con estilo.",
-    "precio": 125000,
+    "precio": 137500,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Bachas/Mod.8337(1).webp",
@@ -309,7 +308,7 @@
   {
     "nombre": "Mod.8350",
     "descripcion": "Bacha extraíble de loza rectangular en color blanco; combinación de practicidad y estilo (365×255×105 mm).",
-    "precio": 102000,
+    "precio": 112200,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Bachas/Mod.8350(1).webp",
@@ -326,7 +325,7 @@
   {
     "nombre": "Mod.8420",
     "descripcion": "Bacha extraíble de loza blanca, diseño moderno y funcional. Reconocida por su durabilidad (410×410×140 mm).",
-    "precio": 114000,
+    "precio": 125400,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Bachas/Mod.8420(1).webp",
@@ -340,11 +339,10 @@
     "tipo": "bacha",
     "link": "https://wa.link/4iqj2x"
   },
-
   {
     "nombre": "Mod.372",
     "descripcion": "Sistema de ducha con multiválvula para alternar entre canilla de bañera, ducha principal y duchador de mano. Mezclador monocomando preciso. Incluye accesorios de instalación.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.372(1).webp",
@@ -361,7 +359,7 @@
   {
     "nombre": "Mod.373",
     "descripcion": "Juego combinado de ducha con 4 botones de funciones y mezclador monocomando, cómodo y preciso.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.373(1).webp",
@@ -378,7 +376,7 @@
   {
     "nombre": "Mod.374",
     "descripcion": "Rociador de 3 modos y núcleo de válvula cerámica. Consola central con luz ambiental.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.374(1).webp",
@@ -395,7 +393,7 @@
   {
     "nombre": "Mod.375",
     "descripcion": "Acabado gris/plateado de alta resistencia. Consola central con luz ambiental y 3 botones para ducha de pared, de mano y bañera.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.375(1).webp",
@@ -412,7 +410,7 @@
   {
     "nombre": "Mod.376",
     "descripcion": "Mezclador monocomando de uso sencillo. Incluye ducha de mano y ducha de pared.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.376(1).webp",
@@ -429,7 +427,7 @@
   {
     "nombre": "Mod.377",
     "descripcion": "Ducha monocomando con ducha de pared (brazo con giro 360°) y ducha de mano.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.377(1).webp",
@@ -446,7 +444,7 @@
   {
     "nombre": "Mod.378",
     "descripcion": "Panel con múltiples funciones: modo mixto, lluvia, pulso y rociador fuerte/suave. Sistema monocomando.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.378(1).webp",
@@ -463,7 +461,7 @@
   {
     "nombre": "Mod.379",
     "descripcion": "Panel con múltiples funciones: modo mixto, lluvia, pulso y rociador fuerte/suave. Sistema monocomando.",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.379(1).webp",
@@ -480,7 +478,7 @@
   {
     "nombre": "Mod.417",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.417(1).webp",
@@ -497,7 +495,7 @@
   {
     "nombre": "Mod.418",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Duchas/Mod.418(1).webp",
@@ -511,11 +509,10 @@
     "tipo": "ducha",
     "link": "https://wa.link/0hdt63"
   },
-
-    {
+  {
     "nombre": "Mod.310",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.310.webp",
@@ -532,7 +529,7 @@
   {
     "nombre": "Mod.325",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.325(1).webp",
@@ -549,7 +546,7 @@
   {
     "nombre": "Mod.326",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.326(1).webp",
@@ -566,7 +563,7 @@
   {
     "nombre": "Mod.330",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.330.webp",
@@ -583,7 +580,7 @@
   {
     "nombre": "Mod.333",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.333(1).webp",
@@ -600,7 +597,7 @@
   {
     "nombre": "Mod.334",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.334.webp",
@@ -617,7 +614,7 @@
   {
     "nombre": "Mod.336",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.336(1).webp",
@@ -634,7 +631,7 @@
   {
     "nombre": "Mod.387",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.387(1).webp",
@@ -651,7 +648,7 @@
   {
     "nombre": "Mod.428",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.428.webp",
@@ -668,7 +665,7 @@
   {
     "nombre": "Mod.430",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.430.webp",
@@ -685,7 +682,7 @@
   {
     "nombre": "Mod.434",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.434(1).webp",
@@ -702,7 +699,7 @@
   {
     "nombre": "Mod.435",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/Griferias/Mod.435(1).webp",
@@ -716,11 +713,10 @@
     "tipo": "griferiaBaño",
     "link": "https://wa.link/183xnu"
   },
-
-   {
+  {
     "nombre": "Mod.618A",
     "descripcion": "",
-    "precio":  0,
+    "precio": 0,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.618A(1).webp",
@@ -737,7 +733,7 @@
   {
     "nombre": "Mod.618B",
     "descripcion": "",
-    "precio": 1452000,
+    "precio": 1597200,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.618B(1).webp",
@@ -754,7 +750,7 @@
   {
     "nombre": "Mod.681-A",
     "descripcion": "",
-    "precio": 1282000,
+    "precio": 1410200,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.681-A(1).webp",
@@ -771,7 +767,7 @@
   {
     "nombre": "Mod.A-A",
     "descripcion": "",
-    "precio": 1225000,
+    "precio": 1347500,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.A-A(1).webp",
@@ -788,7 +784,7 @@
   {
     "nombre": "Mod.A-B",
     "descripcion": "",
-    "precio": 1361000,
+    "precio": 1497100,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.A-B(1).webp",
@@ -805,7 +801,7 @@
   {
     "nombre": "Mod.D-A",
     "descripcion": "",
-    "precio": 1282000,
+    "precio": 1410200,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.D-A(1).webp",
@@ -822,7 +818,7 @@
   {
     "nombre": "Mod.D-B",
     "descripcion": "",
-    "precio": 1452000 ,
+    "precio": 1597200,
     "medida": "",
     "stock": true,
     "img": "/Img/Productos/Baño/SanitariosInteligentes/Mod.D-B(1).webp",
@@ -836,7 +832,6 @@
     "tipo": "sanitarioInteligente",
     "link": "https://wa.link/v5qxtr"
   },
-
   {
     "nombre": "Mod.396",
     "descripcion": "",
@@ -859,7 +854,6 @@
     "tipo": "florDeDucha",
     "link": "https://wa.link/jxd6dl"
   },
-
   {
     "nombre": "Mod.398",
     "descripcion": "",
@@ -962,7 +956,6 @@
     "tipo": "rejillaPiso",
     "link": "https://wa.link/18eg9x"
   },
-
   {
     "nombre": "Mod.364",
     "descripcion": "",
